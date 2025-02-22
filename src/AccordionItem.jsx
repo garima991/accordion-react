@@ -1,15 +1,21 @@
 import { useState } from "react";
 
-const AccordionItem = ({recipe}) => {
-    const [showRecipe, setshowRecipe] = useState(false);
+const AccordionItem = ({recipe, showRecipe, setShowIndex}) => {
+    // const [showRecipe, setshowRecipe] = useState(false);
 
-    const handleClick = () => {
-        setshowRecipe(!showRecipe);
+    // const handleClick = () => {
+    //     setshowRecipe(!showRecipe);
+    // }
+
+    const handleShowIndex = () => {
+        setShowIndex();
     }
+
     return (
         <div className="border border-gray-300 rounded-lg overflow-hidden shadow-md mb-2">
             <button
-                onClick={handleClick}
+                // onClick={handleClick}
+                onClick={handleShowIndex}
                 className="w-full flex justify-between items-center bg-gray-100 hover:bg-gray-200 px-5 py-3 text-left text-lg font-semibold transition-all"
             >
                 <span>{recipe.name} ({recipe.cuisine})</span>
